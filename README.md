@@ -47,23 +47,15 @@ Note: Here I don't provide API specification because the following code snippets
 	};
 	
 	
-#####first of all, create a json loop object with required params
+#####First of all, create a json loop object with required params
 
-#####find a parent node based on a given node
+#####Find a parent node based on a given node
 
+#####Find sibling nodes based on a given node
 
+#####Find ancestor nodes based on a given node
 
-#####find sibling nodes based on a given node
+#####Find descendent nodes based on a given node
 
-
-
-#####find ancestor nodes based on a given node
-
-
-
-#####find descendent nodes based on a given node
-
-
-
-#####find the nodes based on property value
+#####Find the nodes based on property value
 
