@@ -12,33 +12,41 @@ Note: Here I don't provide API specification because the following code snippets
 	var obj = {
 	  'id': '1',
 	  'name': 'renyang',
+	  'birth': 1985,
+	  'role': 'manager'
 	  'member': [
 	    {
 	      'id': '2',
 	      'name': 'huangfan',
+	      'birth': 1983,
+	      'role': 'manager',
 	      'member': [
-	        {'id': '3', 'name': 'chenxiong'}
+	        {'id': '3', 'name': 'chenxiong', 'birth': 1984, 'role': 'engineer'}
 	      ]
 	    },
 	    {
 	      'id': '4',
 	      'name': 'yuguang',
+	      'birth': 1981,
+	      'role': 'engineer manager',
 	      'member': [
-	        {'id': '5', 'name': 'chenjian'}
+	        {'id': '5', 'name': 'chenjian', 'birth': 1985, 'role': 'engineer'}
 	      ]
 	    },
 	    {
 	      'id': '6',
 	      'name': 'deshi',
+	      'birth': 1980,
+	      'role': 'engineer manager',
 	      'member': [
-	        {'id': '7', 'name': 'haibo'},
-	        {'id': '8', 'name': 'weitao'},
-	        {'id': '9', 'name': 'liuzheng'},
-	        {'id': '10', 'name': 'xiaoxue'},
-	        {'id': '11', 'name': 'xuebin',
+	        {'id': '7', 'name': 'haibo', 'birth': 1983, 'role': 'engineer'},
+	        {'id': '8', 'name': 'weitao', 'birth': 1987, 'role': 'engineer'},
+	        {'id': '9', 'name': 'liuzheng', 'birth': 1986, 'role': 'engineer'},
+	        {'id': '10', 'name': 'xiaoxue', 'birth': 1988, 'role': 'engineer'},
+	        {'id': '11', 'name': 'xuebin', 'birth': 1982, 'role': 'engineer'
 	          'member': [
-	            {'id': '12', 'name': 'sam'},
-	            {'id': '13', 'name': 'loklaan'}
+	            {'id': '12', 'name': 'sam', 'birth': 1989, 'role': 'engineer'},
+	            {'id': '13', 'name': 'loklaan', 'birth': 1990, 'role': 'engineer'}
 	          ]
 	        }
 	      ]
