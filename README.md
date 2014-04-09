@@ -33,8 +33,8 @@ Note: Here I don't provide API specification because the following code snippets
 	        {'id': '10', 'name': 'xiaoxue', 'birth': 1988, 'role': 'engineer'},
 	        {'id': '11', 'name': 'xuebin', 'birth': 1982, 'role': 'engineer'
 	          'member': [
-	            {'id': '12', 'name': 'sam', 'birth': 1989, 'role': 'engineer'},
-	            {'id': '13', 'name': 'loklaan', 'birth': 1990, 'role': 'engineer'}
+	            {'id': '12', 'name': 'mike', 'birth': 1980, 'role': 'engineer'},
+	            {'id': '13', 'name': 'mike', 'birth': 1990, 'role': 'engineer'}
 	          ]
 	        }
 	      ]
@@ -45,7 +45,16 @@ Note: Here I don't provide API specification because the following code snippets
 	
 #####First of all, create a json loop object with required params
 	// the first param is the name of 'Id' property of JSON object and the second one is 'children' property name
-
+	var jsonloop = new JSONLoop('id', 'member');
+	
+#####Find one node based on unique id
+	jsonloop.findNodeById(1);
+	
+#####Find the nodes based on conditions
+	// named mike and born after 1985
+	jsonloop.findNodes({ 'name': 'mike', 'birth': { '>': 1985 }});
+	// named mike and born after 1985 passing results to callback
+	jsonloop.findNodes({ 'name': 'mike', 'birth': { '>': 1985 }}, function(err, nodes) {});
 
 #####Find a parent node based on a given node
 
@@ -55,5 +64,5 @@ Note: Here I don't provide API specification because the following code snippets
 
 #####Find descendent nodes based on a given node
 
-#####Find the nodes based on property value
+
 
