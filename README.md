@@ -10,34 +10,22 @@ Note: Here I don't provide API specification because the following code snippets
 
 #####Sample Data
 	var obj = {
-	  'id': '1',
-	  'name': 'renyang',
-	  'birth': 1985,
-	  'role': 'manager'
+	  'id': '1', 'name': 'renyang', 'birth': 1985, 'role': 'manager'
 	  'member': [
 	    {
-	      'id': '2',
-	      'name': 'huangfan',
-	      'birth': 1983,
-	      'role': 'manager',
+	      'id': '2', 'name': 'huangfan', 'birth': 1983, 'role': 'manager',
 	      'member': [
 	        {'id': '3', 'name': 'chenxiong', 'birth': 1984, 'role': 'engineer'}
 	      ]
 	    },
 	    {
-	      'id': '4',
-	      'name': 'yuguang',
-	      'birth': 1981,
-	      'role': 'engineer manager',
+	      'id': '4', 'name': 'yuguang', 'birth': 1981, 'role': 'engineer manager',
 	      'member': [
 	        {'id': '5', 'name': 'chenjian', 'birth': 1985, 'role': 'engineer'}
 	      ]
 	    },
 	    {
-	      'id': '6',
-	      'name': 'deshi',
-	      'birth': 1980,
-	      'role': 'engineer manager',
+	      'id': '6', 'name': 'deshi', 'birth': 1980, 'role': 'engineer manager',
 	      'member': [
 	        {'id': '7', 'name': 'haibo', 'birth': 1983, 'role': 'engineer'},
 	        {'id': '8', 'name': 'weitao', 'birth': 1987, 'role': 'engineer'},
