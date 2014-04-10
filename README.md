@@ -48,21 +48,24 @@ Note: Here I don't provide API specification because the following code snippets
 	var jsonloop = new JSONLoop('id', 'member');
 	
 #####Find one node based on unique id
-	jsonloop.findNodeById(1);
+	// node is what we are looking for
+	jsonloop.findNodeById(1, function(err, node) {});
 	
 #####Find the nodes based on conditions
-	// named mike and born after 1985
-	jsonloop.findNodes({ 'name': 'mike', 'birth': { '>': 1985 }});
-	// named mike and born after 1985 passing results to callback
+	// named mike and born after 1985. At last, nodes is an array of node.
 	jsonloop.findNodes({ 'name': 'mike', 'birth': { '>': 1985 }}, function(err, nodes) {});
 
 #####Find a parent node based on a given node
+	jsonloop.findParent(node, function(err, parent) {});
 
 #####Find sibling nodes based on a given node
+	jsonloop.findSiblings(node, function(err, siblings) {});
 
 #####Find ancestor nodes based on a given node
+	jsonloop.findAncestors(node, function(err, ancestors) {});
 
 #####Find descendent nodes based on a given node
+	jsonloop.findDescenents(node, function(err, descendents) {});
 
 
 
