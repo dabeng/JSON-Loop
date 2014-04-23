@@ -10,7 +10,7 @@ Note: Here I don't provide API specification because the following code snippets
 
 #####Sample Data
 	var obj = {
-	  'id': '1', 'name': 'renyang', 'birth': 1985, 'role': 'manager'
+	  'id': '1', 'name': 'renyang', 'birth': 1985, 'role': 'manager',
 	  'member': [
 	    {
 	      'id': '2', 'name': 'huangfan', 'birth': 1983, 'role': 'manager',
