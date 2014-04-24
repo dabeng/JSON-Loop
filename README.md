@@ -45,11 +45,17 @@ Note: Here I don't provide API specification because the following code snippets
 	
 #####First of all, create a json loop object with required params
 	// the first param is the name of 'Id' property of JSON object and the second one is 'children' property name
-	var jsonloop = new JSONLoop('id', 'member');
+	var jsonloop = new JSONLoop(obj, 'id', 'member');
 	
 #####Find one node based on unique id
 	// node is what we are looking for
-	jsonloop.findNodeById(1, function(err, node) {});
+	jsonloop.findNodeById(obj, '11', function(err, node) {
+	  if (err) {
+            console.log(err);
+          } else {
+            console.dir(node);
+          }
+	});
 	
 #####Find the nodes based on conditions
 	// named mike and born after 1985. At last, nodes is an array of node.
