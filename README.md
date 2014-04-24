@@ -51,10 +51,10 @@ Note: Here I don't provide API specification because the following code snippets
 	// node is what we are looking for
 	jsonloop.findNodeById(obj, '11', function(err, node) {
 	  if (err) {
-            console.log(err);
-          } else {
-            console.dir(node);
-          }
+	    console.log(err);
+	  } else {
+	    console.dir(node);
+	  }
 	});
 	
 #####Find the nodes based on conditions
