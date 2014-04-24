@@ -38,16 +38,16 @@
 
     var jsonloop = new JSONLoop(obj, 'id', 'member');
 
-    jsonloop.findNodeById(obj, '11', function(error, node) {
-      if (error) {
-        console.log(error);
+    jsonloop.findNodeById(obj, '11', function(err, node) {
+      if (err) {
+        console.log(err);
       } else {
         console.dir(node);
       }
     });
-    jsonloop.findNodeById(obj, '14', function(error, node) {
-      if (error) {
-        console.log(error);
+    jsonloop.findNodeById(obj, '14', function(err, node) {
+      if (err) {
+        console.log(err);
       } else {
         console.dir(node);
       }
