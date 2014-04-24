@@ -10,7 +10,7 @@ Note: Here I don't provide API specification because the following code snippets
 
 #####Sample Data
 	var obj = {
-	  'id': '1', 'name': 'renyang', 'birth': 1985, 'role': 'manager'
+	  'id': '1', 'name': 'renyang', 'birth': 1985, 'role': 'manager',
 	  'member': [
 	    {
 	      'id': '2', 'name': 'huangfan', 'birth': 1983, 'role': 'manager',
@@ -31,7 +31,7 @@ Note: Here I don't provide API specification because the following code snippets
 	        {'id': '8', 'name': 'weitao', 'birth': 1987, 'role': 'engineer'},
 	        {'id': '9', 'name': 'liuzheng', 'birth': 1986, 'role': 'engineer'},
 	        {'id': '10', 'name': 'xiaoxue', 'birth': 1988, 'role': 'engineer'},
-	        {'id': '11', 'name': 'xuebin', 'birth': 1982, 'role': 'engineer'
+	        {'id': '11', 'name': 'xuebin', 'birth': 1982, 'role': 'engineer',
 	          'member': [
 	            {'id': '12', 'name': 'mike', 'birth': 1980, 'role': 'engineer'},
 	            {'id': '13', 'name': 'mike', 'birth': 1990, 'role': 'engineer'}
