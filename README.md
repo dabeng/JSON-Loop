@@ -44,7 +44,8 @@ Note: Here I don't provide API specification because the following code snippets
 	
 	
 #####First of all, create a json loop object with required params
-	// the first param is the name of 'Id' property of JSON object and the second one is 'children' property name
+	// the first param is the name of 'Id' property of JSON object and the second one
+	// is 'children' property name
 	var jsonloop = new JSONLoop(obj, 'id', 'member');
 	
 #####Find one node based on unique id
@@ -58,8 +59,19 @@ Note: Here I don't provide API specification because the following code snippets
 	});
 	
 #####Find the nodes based on conditions
-	// named mike and born after 1985. At last, nodes is an array of node.
-	jsonloop.findNodes({ 'name': 'mike', 'birth': { '>': 1985 }}, function(err, nodes) {});
+	// find our uE engineer with her name
+	jsonloop.findNodes(obj, {'name': 'xiaoxue'}, function(err, nodes) {
+	  nodes.forEach(function(node) {
+	    console.dir(node);
+	  });
+	});
+	// find young engineers in our team. Here, nodes is an array of node.
+	jsonloop.findNodes(obj, {'role': /engineer/i, 'birth': {'>=': 1985, '<': 1990}},
+	  function(err, nodes) {
+	    nodes.forEach(function(node) {
+	      console.dir(node);
+	    });
+	});
 
 #####Find a parent node based on a given node
 	jsonloop.findParent(node, function(err, parent) {});
