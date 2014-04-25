@@ -27,8 +27,8 @@
             {'id': '10', 'name': 'xiaoxue', 'birth': 1988, 'role': 'engineer'},
             {'id': '11', 'name': 'xuebin', 'birth': 1982, 'role': 'engineer',
               'member': [
-                {'id': '12', 'name': 'mike', 'birth': 1980, 'role': 'engineer'},
-                {'id': '13', 'name': 'mike', 'birth': 1990, 'role': 'engineer'}
+                {'id': '12', 'name': 'Michael Jordan', 'birth': 1980, 'role': 'engineer'},
+                {'id': '13', 'name': 'Michael Schumacher', 'birth': 1990, 'role': 'engineer'}
               ]
             }
           ]
@@ -38,7 +38,7 @@
 
     var jsonloop = new JSONLoop(obj, 'id', 'member');
 
-    jsonloop.findNodeById(obj, '11', function(err, node) {
+    jsonloop.findNodeById(obj, '13', function(err, node) {
       if (err) {
         console.log(err);
       } else {
@@ -52,6 +52,19 @@
         console.dir(node);
       }
     });
+
+    jsonloop.findNodes(obj, {'name': 'xiaoxue'}, function(err, nodes) {
+        nodes.forEach(function(node) {
+          console.dir(node);
+        });
+      });
+
+    jsonloop.findNodes(obj, {'role': /engineer/i, 'birth': {'>=': 1985, '<': 1990}},
+      function(err, nodes) {
+        nodes.forEach(function(node) {
+          console.dir(node);
+        });
+      });
 
   </script>
 </body>
