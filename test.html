@@ -1,6 +1,11 @@
 <!DOCTYPE HTML>
 <head></head>
 <body>
+  <a href="#" id="find1">find node by Id '11'</a><br>
+  <a href="#" id='find2'>find nodes by conditions {'name': 'xiaoxue'}</a><br>
+  <a href="#" id='find3'>find nodes by conditions {'role': /engineer/i, 'birth': {'>=': 1985, '<': 1990}}</a><br>
+  <a href="#" id='find4'>find nodes</a><br>
+  <a href="#" id='find5'>find node by Id</a><br>
   <script type="text/javascript" src="JSONLoop.js"></script>
   <script tyoe="text/javascript">
     var obj = {
@@ -38,33 +43,36 @@
 
     var jsonloop = new JSONLoop(obj, 'id', 'member');
 
-    jsonloop.findNodeById(obj, '13', function(err, node) {
-      if (err) {
-        console.log(err);
-      } else {
-        console.dir(node);
-      }
-    });
-    jsonloop.findNodeById(obj, '14', function(err, node) {
-      if (err) {
-        console.log(err);
-      } else {
-        console.dir(node);
-      }
-    });
+    document.getElementById('find1').addEventListener('click', function(){
+      jsonloop.findNodeById(obj, '11', function(err, node) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.clear();
+          console.dir(node);
+        }
+      });
+    }, false);
 
-    jsonloop.findNodes(obj, {'name': 'xiaoxue'}, function(err, nodes) {
+    document.getElementById('find2').addEventListener('click', function(){
+      jsonloop.findNodes(obj, {'name': 'xiaoxue'}, function(err, nodes) {
+        console.clear();
         nodes.forEach(function(node) {
           console.dir(node);
         });
       });
+    }, false);
 
-    jsonloop.findNodes(obj, {'role': /engineer/i, 'birth': {'>=': 1985, '<': 1990}},
-      function(err, nodes) {
-        nodes.forEach(function(node) {
-          console.dir(node);
+    document.getElementById('find3').addEventListener('click', function(){
+      jsonloop.findNodes(obj, {'role': /engineer/i, 'birth': {'>=': 1985, '<': 1990}},
+        function(err, nodes) {
+          console.clear();
+          nodes.forEach(function(node) {
+            console.dir(node);
+          });
         });
-      });
+    }, false);
+
 
   </script>
 </body>

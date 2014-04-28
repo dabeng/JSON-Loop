@@ -32,10 +32,19 @@ window.JSONLoop.prototype = {
       }
     }();
   },
+  generateClone: function(obj) {
+   var target = {};
+   for (var i in obj) {
+     if (i !== this.children) {
+       target[i] = obj[i];
+     }
+   }
+   return target;
+  },
   findNodeById: function(obj, id, callback) {
     if (obj[this.id] === id) {
       this.count = this.total + 0;
-      callback(null, obj);
+      callback(null, this.generateClone(obj));
     } else {
       if (this.count === 1) {
         this.count = this.total + 0;
