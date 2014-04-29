@@ -91,7 +91,23 @@ Note: Here I don't provide API specification because the following code snippets
 	});
 
 #####Find sibling nodes based on a given node
-	jsonloop.findSiblings(node, function(err, siblings) {});
+	jsonloop.findNodeById(obj, '11', function(err, node) {
+	  if (err) {
+	    console.log(err);
+	  } else {
+	    console.clear();
+	    jsonloop.findSiblings(obj, node, function(err, siblings) {
+	    console.clear();
+	    if (err) {
+	      console.log(err);
+	    } else {
+	      siblings.forEach(function(item) {
+	        console.dir(item);
+	      });
+	    }          
+	  });
+	}
+      });
 
 #####Find ancestor nodes based on a given node
 	jsonloop.findAncestors(node, function(err, ancestors) {});
