@@ -112,8 +112,5 @@ Note: Here I don't provide API specification because the following code snippets
 #####Find ancestor nodes based on a given node
 	jsonloop.findAncestors(node, function(err, ancestors) {});
 
-#####Find descendent nodes based on a given node
-	jsonloop.findDescenents(node, function(err, descendents) {});
-
 
 
