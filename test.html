@@ -1,12 +1,27 @@
 <!DOCTYPE HTML>
-<head></head>
+<head>
+  <style type="text/css">
+    div {
+      margin: 20px 5px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #0071BD;
+      cursor: pointer;
+    }
+    #note {
+      color: black;
+      cursor: default;
+    }
+  </style>
+</head>
 <body>
-  <a href="#" id="find1">find node by Id '11'</a><br>
-  <a href="#" id='find2'>find nodes by conditions {'name': 'xiaoxue'}</a><br>
-  <a href="#" id='find3'>find nodes by conditions {'role': /engineer/i, 'birth': {'>=': 1985, '<': 1990}}</a><br>
-  <a href="#" id='find4'>find parent node of the node with id '11'</a><br>
-  <a href="#" id='find5'>find sibling nodes of the node with id '11'</a><br>
-  <a href="#" id='find6'>find ancestor nodes of the node with id '12'</a><br>
+  <div id="find1">find node by Id '11'</div>
+  <div id="find2">find nodes by conditions {'name': 'xiaoxue'}</div>
+  <div id="find3">find nodes by conditions {'role': /engineer/i, 'birth': {'>=': 1985, '<': 1990}}</div>
+  <div id="find4">find parent node of the node with id '11'</div>
+  <div id="find5">find sibling nodes of the node with id '11'</div>
+  <div id="find6">find ancestor nodes of the node with id '12'</div>
+  <div id="note">Note: console of the browser will show you test result</div>
   <script type="text/javascript" src="JSONLoop.js"></script>
   <script tyoe="text/javascript">
     var obj = {
