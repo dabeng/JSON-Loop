@@ -185,7 +185,7 @@
       var that = this;
       this.findParent(obj, node, function(err, parent) {
         if (err) {
-          callback('its findSibling nodes do not exist', null);
+          callback('its sibling nodes do not exist', null);
         } else {
           var siblings = [];
           parent[that.children].forEach(function(item) {
@@ -197,8 +197,23 @@
         }
       }, false);
     },
-    findAncestors: function(node)  {
-      return ;
+    findAncestors: function(obj, node, callback)  {
+      var that = this;
+      if (node[this.id] === obj[this.id]) {
+        var copy = nodes.slice(0);
+        nodes = [];
+        callback(null, copy);
+      } else {
+        this.findParent(obj, node, function(err, parent) {
+        if (err) {
+          callback('its ancestor nodes do not exist', null);
+        } else {
+          nodes.push(parent);
+          that.findAncestors(obj, parent, callback);
+        }
+      });
+      }
+
     }
   }
 }(window));

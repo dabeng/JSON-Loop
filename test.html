@@ -6,6 +6,7 @@
   <a href="#" id='find3'>find nodes by conditions {'role': /engineer/i, 'birth': {'>=': 1985, '<': 1990}}</a><br>
   <a href="#" id='find4'>find parent node of the node with id '11'</a><br>
   <a href="#" id='find5'>find sibling nodes of the node with id '11'</a><br>
+  <a href="#" id='find6'>find ancestor nodes of the node with id '12'</a><br>
   <script type="text/javascript" src="JSONLoop.js"></script>
   <script tyoe="text/javascript">
     var obj = {
@@ -103,6 +104,26 @@
               console.log(err);
             } else {
               siblings.forEach(function(item) {
+                console.dir(item);
+              });
+            }          
+          });
+        }
+      });
+    }, false);
+
+    document.getElementById('find6').addEventListener('click', function(){
+      jsonloop.findNodeById(obj, '12', function(err, node) {
+        console.clear();
+        if (err) {
+          console.log(err);
+        } else {
+          jsonloop.findAncestors(obj, node, function(err, ancestors) {
+            console.clear();
+            if (err) {
+              console.log(err);
+            } else {
+              ancestors.forEach(function(item) {
                 console.dir(item);
               });
             }          
