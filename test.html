@@ -4,7 +4,7 @@
   <a href="#" id="find1">find node by Id '11'</a><br>
   <a href="#" id='find2'>find nodes by conditions {'name': 'xiaoxue'}</a><br>
   <a href="#" id='find3'>find nodes by conditions {'role': /engineer/i, 'birth': {'>=': 1985, '<': 1990}}</a><br>
-  <a href="#" id='find4'>find nodes</a><br>
+  <a href="#" id='find4'>find parent node of node with id '11'</a><br>
   <a href="#" id='find5'>find node by Id</a><br>
   <script type="text/javascript" src="JSONLoop.js"></script>
   <script tyoe="text/javascript">
@@ -70,6 +70,18 @@
           nodes.forEach(function(node) {
             console.dir(node);
           });
+        });
+    }, false);
+
+    document.getElementById('find4').addEventListener('click', function(){
+      jsonloop.findParent(obj, {'id': '11'},
+        function(err, node) {
+          console.clear();
+          if (err) {
+            console.log(err);
+          } else {
+            console.dir(node);
+          }          
         });
     }, false);
 

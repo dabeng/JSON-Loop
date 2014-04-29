@@ -152,8 +152,30 @@ window.JSONLoop.prototype = {
       }
     }(obj, conditions, callback);
   },
-  findParent: function(node)  {
-    return ;
+  findParent: function(obj, node, callback)  {
+    var that = this;
+    if (this.count === 1) {
+      this.count = this.total + 0;
+      callback('its parent node does not exist', null);
+    } else {
+      this.count--;
+      if (typeof obj[this.children] !== 'undefined') {
+        var notFind = true;
+        obj[this.children].forEach(function(item) {
+          if (item[that.id] === node[that.id]) {
+            that.count = that.total + 0;
+            callback(null, that.generateClone(obj));
+            notFind = false;
+            return false;
+          }
+        });
+        if (notFind) {
+          obj[this.children].forEach(function(item) {
+            that.findParent(item, node, callback);
+          });
+        }
+      }
+    }
   },
   findSiblings: function(node)  {
     return ;
