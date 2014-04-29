@@ -33,8 +33,8 @@ Note: Here I don't provide API specification because the following code snippets
 	        {'id': '10', 'name': 'xiaoxue', 'birth': 1988, 'role': 'engineer'},
 	        {'id': '11', 'name': 'xuebin', 'birth': 1982, 'role': 'engineer',
 	          'member': [
-	            {'id': '12', 'name': 'mike', 'birth': 1980, 'role': 'engineer'},
-	            {'id': '13', 'name': 'mike', 'birth': 1990, 'role': 'engineer'}
+	            {'id': '12', 'name': 'sam', 'birth': 1980, 'role': 'engineer'},
+	            {'id': '13', 'name': 'loklaan', 'birth': 1990, 'role': 'engineer'}
 	          ]
 	        }
 	      ]
