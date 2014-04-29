@@ -74,7 +74,21 @@ Note: Here I don't provide API specification because the following code snippets
 	});
 
 #####Find a parent node based on a given node
-	jsonloop.findParent(node, function(err, parent) {});
+	jsonloop.findNodeById(obj, '11', function(err, node) {
+	  if (err) {
+	    console.log(err);
+	  } else {
+	    console.clear();
+	    jsonloop.findParent(obj, node, function(err, node) {
+	      console.clear();
+	      if (err) {
+	        console.log(err);
+	      } else {
+	        console.dir(node);
+	      }          
+	    });
+	  }
+	});
 
 #####Find sibling nodes based on a given node
 	jsonloop.findSiblings(node, function(err, siblings) {});
