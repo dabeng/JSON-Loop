@@ -110,7 +110,22 @@ Note: Here I don't provide API specification because the following code snippets
 	});
 
 #####Find ancestor nodes based on a given node
-	jsonloop.findAncestors(node, function(err, ancestors) {});
-
+	jsonloop.findNodeById(obj, '12', function(err, node) {
+	  console.clear();
+	  if (err) {
+	    console.log(err);
+	  } else {
+	    jsonloop.findAncestors(obj, node, function(err, ancestors) {
+	      console.clear();
+	      if (err) {
+	        console.log(err);
+	      } else {
+	        ancestors.forEach(function(item) {
+	          console.dir(item);
+	        });
+	      }          
+	    });
+	  }
+	});
 
 
