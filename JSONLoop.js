@@ -33,13 +33,13 @@
       }();
     },
     generateClone: function(obj) {
-     var target = {};
-     for (var i in obj) {
-       if (i !== this.children) {
-         target[i] = obj[i];
-       }
-     }
-     return target;
+      var target = {};
+      for (var i in obj) {
+        if (i !== this.children) {
+          target[i] = obj[i];
+        }
+      }
+      return target;
     },
     findNodeById: function(obj, id, callback) {
       if (obj[this.id] === id) {
@@ -152,7 +152,7 @@
         }
       }(obj, conditions, callback);
     },
-    findParent: function(obj, node, callback)  {
+    findParent: function(obj, node, callback, needCleanNode)  {
       var that = this;
       if (this.count === 1) {
         this.count = this.total + 0;
@@ -164,7 +164,11 @@
           obj[this.children].forEach(function(item) {
             if (item[that.id] === node[that.id]) {
               that.count = that.total + 0;
-              callback(null, that.generateClone(obj));
+              if (needCleanNode) {
+                callback(null, that.generateClone(obj));
+              } else {
+                callback(null, obj);
+              }
               notFind = false;
               return false;
             }
@@ -178,7 +182,20 @@
       }
     },
     findSiblings: function(obj, node, callback) {
-      return ;
+      var that = this;
+      this.findParent(obj, node, function(err, parent) {
+        if (err) {
+          callback('its findSibling nodes do not exist', null);
+        } else {
+          var siblings = [];
+          parent[that.children].forEach(function(item) {
+            if (item[that.id] !== node[that.id]) {
+              siblings.push(that.generateClone(item));
+            }
+          });
+          callback(null, siblings);
+        }
+      }, false);
     },
     findAncestors: function(node)  {
       return ;

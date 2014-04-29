@@ -97,12 +97,14 @@
           console.log(err);
         } else {
           console.clear();
-          jsonloop.findSiblings(obj, node, function(err, node) {
+          jsonloop.findSiblings(obj, node, function(err, siblings) {
             console.clear();
             if (err) {
               console.log(err);
             } else {
-              console.dir(node);
+              siblings.forEach(function(item) {
+                console.dir(item);
+              });
             }          
           });
         }
