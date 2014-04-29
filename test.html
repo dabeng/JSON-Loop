@@ -74,15 +74,21 @@
     }, false);
 
     document.getElementById('find4').addEventListener('click', function(){
-      jsonloop.findParent(obj, {'id': '11'},
-        function(err, node) {
+      jsonloop.findNodeById(obj, '11', function(err, node) {
+        if (err) {
+          console.log(err);
+        } else {
           console.clear();
-          if (err) {
-            console.log(err);
-          } else {
-            console.dir(node);
-          }          
-        });
+          jsonloop.findParent(obj, node, function(err, node) {
+            console.clear();
+            if (err) {
+              console.log(err);
+            } else {
+              console.dir(node);
+            }          
+          });
+        }
+      });
     }, false);
 
 
