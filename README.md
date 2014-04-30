@@ -1,5 +1,5 @@
 # JSON Loop
-JSON Loop is a super easy to use tool class helping you loop the unorder structure of JSON Object.
+JSON Loop is a super easy to use tool class helping you explore the structure details from any child node of a JSON object.
 
 
 ##Classic Usage
