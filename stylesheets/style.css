@@ -1,0 +1,25 @@
+html, body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  box-sizing: border-box;
+}
+
+header {
+  height: 100px;
+  margin: 0 auto;
+  background-color: black;
+}
+
+#cabinet {
+  width:1000px;
+  height:600px;
+  background: url(../images/background.jpg);
+  margin: 10px auto;
+  border: 5px;
+}
+
+footer {
+  background-color: black;
+}
