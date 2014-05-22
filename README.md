@@ -129,4 +129,4 @@ Note: Here I don't provide API specification because the following code snippets
 
 ## Circle of Competence
 The following are posts related to loop through nested json object where JOSN Loop can work best:
-* [How do I loop through deeply nested properties of a json object?](http://stackoverflow.com/questions/5189387/how-do-i-loop-through-deeply-nested-properties-of-a-json-object)
+* [\[stackoverflow\]How do I loop through deeply nested properties of a json object?](http://stackoverflow.com/questions/5189387/how-do-i-loop-through-deeply-nested-properties-of-a-json-object)
