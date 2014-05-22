@@ -10,13 +10,53 @@ header {
   height: 100px;
   margin: 0 auto;
   background-color: black;
+  color: white!important;
+  overflow: hidden;
+}
+
+header div {
+  display: inline-block;
+  float: left;
+}
+
+.heading {
+  font-size: 50px;
+}
+
+.description {
+  font-size: 20px;
+  margin-top:70px;
+  margin-left: -100px;
+}
+
+header a.github {
+  float: right;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+header a:link { color: white; }
+header a:visited { color: white; }
+header a:hover { color: white; }
+header a:active {color: white; }
+header a:link { text-decoration:none; }
+header a:visited { text-decoration:none; }
+header a:hover { text-decoration:underline; }
+header a:active { text-decoration:underline; }
+
+#logo {
+  width: 80px;
+  height: 80px;
+  margin: 10px 30px;
+  background: url(../images/logo.jpg);
+  background-size: 80px 80px;
+  border-radius: 40px;
 }
 
 #cabinet {
   width:1000px;
   height:600px;
   background: url(../images/background.jpg);
-  margin: 10px auto;
+  margin: 10px auto 20px;
   border: 5px;
 }
 
