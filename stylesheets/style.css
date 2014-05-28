@@ -3,14 +3,18 @@ html, body {
   padding: 0px;
   margin: 0px;
   color: white;
-  box-sizing: border-box;
+  font-family: "Architects Daughter";
 }
 
 header {
   height: 100px;
   margin: 0 auto;
-  background-color: black;
-  color: white!important;
+  background: -webkit-linear-gradient(left, white, black 120px);
+  background: -moz-linear-gradient(left, white, black 120px);
+  background: -o-linear-gradient(left, white, black 120px);
+  background: -ms-linear-gradient(left, white, black 120px);
+  background: linear-gradient(left, white, black 120px);
+  color: white;
   overflow: hidden;
 }
 
@@ -21,6 +25,7 @@ header div {
 
 .heading {
   font-size: 50px;
+  font-family: "Fredericka the Great";
 }
 
 .description {
@@ -32,12 +37,16 @@ header div {
 header a.github {
   float: right;
   margin-top: 10px;
-  margin-right: 50px;
+  margin-right: 20px;
+  padding: 2px 10px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
 }
-header a:link { color: white; }
-header a:visited { color: white; }
-header a:hover { color: white; }
-header a:active {color: white; }
+header a:link { color: black; }
+header a:visited { color: black; }
+header a:hover { color: black; }
+header a:active {color: black; }
 header a:link { text-decoration:none; }
 header a:visited { text-decoration:none; }
 header a:hover { text-decoration:underline; }
@@ -47,9 +56,8 @@ header a:active { text-decoration:underline; }
   width: 80px;
   height: 80px;
   margin: 10px 30px;
-  background: url(../images/logo.jpg);
+  background: url(../images/logo.gif);
   background-size: 80px 80px;
-  border-radius: 40px;
 }
 
 #cabinet {
