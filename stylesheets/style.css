@@ -70,6 +70,20 @@ header a:active { text-decoration:underline; }
   box-shadow: 0 10px 20px rgba(0,0,0,0.8);
 }
 
+.topic {
+  width: 230px;
+  height: 230px;
+  float: left;
+  margin-left: 16px;
+  background: url(../images/papers.png);
+  background-size: 230px 230px;
+  text-align: center;
+  line-height: 230px;
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+}
+
 footer {
   background-color: black;
 }
