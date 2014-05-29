@@ -16,6 +16,7 @@ header {
   background: linear-gradient(left, white, black 120px);
   color: white;
   overflow: hidden;
+  box-shadow: 0 10px 10px -10px rgba(0,0,0,0.8)
 }
 
 header div {
@@ -64,8 +65,9 @@ header a:active { text-decoration:underline; }
   width:1000px;
   height:600px;
   background: url(../images/background.jpg);
-  margin: 10px auto 20px;
+  margin: 20px auto 0px;
   border: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.8);
 }
 
 footer {
