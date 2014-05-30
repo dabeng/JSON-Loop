@@ -61,7 +61,7 @@ header a:active { text-decoration:underline; }
   background-size: 80px 80px;
 }
 
-#cabinet {
+#blackboard {
   width:1000px;
   height:600px;
   background: url(../images/background.jpg);
@@ -72,14 +72,13 @@ header a:active { text-decoration:underline; }
 
 .topic {
   width: 230px;
-  height: 230px;
+  height: 160px;
   float: left;
+  margin-top: 16px;
   margin-left: 16px;
-  background: url(../images/papers.png);
-  background-size: 230px 230px;
+  background: url(../images/topic.gif);
   text-align: center;
-  line-height: 230px;
-  color: black;
+  line-height: 160px;
   font-size: 28px;
   font-weight: bold;
 }
