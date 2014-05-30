@@ -79,8 +79,12 @@ header a:active { text-decoration:underline; }
   background: url(../images/topic.gif);
   text-align: center;
   line-height: 160px;
-  font-size: 28px;
-  font-weight: bold;
+  /*font-size: 28px;
+  font-weight: bold;*/
+}
+
+.sourcecode {
+  display: none;
 }
 
 footer {
