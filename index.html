@@ -3,8 +3,8 @@
   <head>
     <meta charset='utf-8'>
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
-    <link href="http://fonts.googleapis.com/css?family=Architects+Daughter:400" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Fredericka+the Great:400" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Architects+Daughter:400" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Fredericka+the Great:400" rel="stylesheet" type="text/css">
     <link type="text/css" href="stylesheets/jquery.jscrollpane.css" rel="stylesheet" media="all" />
     <title>Json-loop by dabeng</title>
   </head>
@@ -18,23 +18,153 @@
     <section id="blackboard">
       <article class="topic sampledata">
         <h1 class="heading">Sample Data</h1>
-        <p class="description"></p>
+        <p class="description">Here, we have a JSON object indicating the structure of development team </p>
         <pre class="sourcecode">
-          obj = {
-            'a': '123',
-            'b': '234'
+          var obj = {
+            'id': '1', 'name': 'renyang', 'birth': 1985, 'role': 'manager',
+            'member': [
+              {
+                'id': '2', 'name': 'huangfan', 'birth': 1983, 'role': 'manager',
+                'member': [
+                  {'id': '3', 'name': 'chenxiong', 'birth': 1984, 'role': 'engineer'}
+                ]
+              },
+              {
+                'id': '4', 'name': 'yuguang', 'birth': 1981, 'role': 'engineer manager',
+                'member': [
+                  {'id': '5', 'name': 'chenjian', 'birth': 1985, 'role': 'engineer'}
+                ]
+              },
+              {
+                'id': '6', 'name': 'deshi', 'birth': 1980, 'role': 'engineer manager',
+                'member': [
+                  {'id': '7', 'name': 'haibo', 'birth': 1983, 'role': 'engineer'},
+                  {'id': '8', 'name': 'weitao', 'birth': 1987, 'role': 'engineer'},
+                  {'id': '9', 'name': 'liuzheng', 'birth': 1986, 'role': 'engineer'},
+                  {'id': '10', 'name': 'xiaoxue', 'birth': 1988, 'role': 'engineer'},
+                  {'id': '11', 'name': 'xuebin', 'birth': 1982, 'role': 'engineer',
+                    'member': [
+                      {'id': '12', 'name': 'sam', 'birth': 1980, 'role': 'engineer'},
+                      {'id': '13', 'name': 'loklaan', 'birth': 1990, 'role': 'engineer'}
+                    ]
+                  }
+                ]
+              }
+            ]
           };
         </pre>
       </article>
-      <article class="topic preparation">Preparation</article>
-      <article class="topic method">findNodeById()</article>
-      <article class="topic method">findNodes()</article>
-      <article class="topic method">findParent()</article>
-      <article class="topic method">findSiblings()</article>
-      <article class="topic method">findAncestors()</article>
-
+      <article class="topic preparation">
+        <h1 class="heading">Preparation</h1>
+        <p class="description">First of all, create a json loop object with required params</p>
+        <pre class="sourcecode">
+          // the first param is the name of 'Id' property of JSON object and the second one
+          // is 'children' property name
+          var jsonloop = new JSONLoop(obj, 'id', 'member');
+        </pre>
+      </article>
+      <article class="topic method">
+        <h1 class="heading">findNodeById()</h1>
+        <p class="description">Find one node based on unique id</p>
+        <pre class="sourcecode">
+          // node is what we are looking for
+          jsonloop.findNodeById(obj, '11', function(err, node) {
+            if (err) {
+              console.log(err);
+            } else {
+              console.dir(node);
+            }
+          });
+        </pre>
+      </article>
+      <article class="topic method">
+        <h1 class="heading">findNodes()</h1>
+        <p class="description">Find the nodes based on conditions</p>
+        <pre class="sourcecode">
+          // find our uE engineer with her name
+          jsonloop.findNodes(obj, {'name': 'xiaoxue'}, function(err, nodes) {
+            nodes.forEach(function(node) {
+              console.dir(node);
+            });
+          });
+          // find young engineers in our team. Here, nodes is an array of node.
+          jsonloop.findNodes(obj, {'role': /engineer/i, 'birth': {'>=': 1985, '<': 1990}},
+            function(err, nodes) {
+              nodes.forEach(function(node) {
+                console.dir(node);
+              });
+          });
+        </pre>
+      </article>
+      <article class="topic method">
+        <h1 class="heading">findParent()</h1>
+        <p class="description">Find a parent node based on a given node</p>
+        <pre class="sourcecode">
+          jsonloop.findNodeById(obj, '11', function(err, node) {
+            if (err) {
+              console.log(err);
+            } else {
+              console.clear();
+              jsonloop.findParent(obj, node, function(err, node) {
+                console.clear();
+                if (err) {
+                  console.log(err);
+                } else {
+                  console.dir(node);
+                }
+              });
+            }
+          });
+        </pre>
+      </article>
+      <article class="topic method">
+        <h1 class="heading">findSiblings()</h1>
+        <p class="description">Find sibling nodes based on a given node</p>
+        <pre class="sourcecode">
+          jsonloop.findNodeById(obj, '11', function(err, node) {
+            if (err) {
+              console.log(err);
+            } else {
+              console.clear();
+              jsonloop.findSiblings(obj, node, function(err, siblings) {
+                console.clear();
+                if (err) {
+                  console.log(err);
+                } else {
+                  siblings.forEach(function(item) {
+                    console.dir(item);
+                  });
+                }
+              });
+            }
+          });
+        </pre>
+      </article>
+      <article class="topic method">
+        <h1 class="heading">findAncestors()</h1>
+        <p class="description">Find ancestor nodes based on a given node</p>
+        <pre class="sourcecode">
+          jsonloop.findNodeById(obj, '12', function(err, node) {
+            console.clear();
+            if (err) {
+              console.log(err);
+            } else {
+              jsonloop.findAncestors(obj, node, function(err, ancestors) {
+                console.clear();
+                if (err) {
+                  console.log(err);
+                } else {
+                  ancestors.forEach(function(item) {
+                    console.dir(item);
+                  });
+                }
+              });
+            }
+          });
+        </pre>
+      </article>
     </section>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/jquery.mousewheel.js"></script>
     <script type="text/javascript" src="javascripts/main.js"></script>
   </body>

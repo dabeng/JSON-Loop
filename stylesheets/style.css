@@ -24,12 +24,12 @@ header div {
   float: left;
 }
 
-.heading {
+header .heading {
   font-size: 50px;
   font-family: "Fredericka the Great";
 }
 
-.description {
+header .description {
   font-size: 20px;
   margin-top:70px;
   margin-left: -100px;
@@ -77,10 +77,14 @@ header a:active { text-decoration:underline; }
   margin-top: 16px;
   margin-left: 16px;
   background: url(../images/topic.gif);
+}
+
+.topic .heading {
   text-align: center;
-  line-height: 160px;
-  /*font-size: 28px;
-  font-weight: bold;*/
+}
+
+.topic .description {
+  padding: 0 10px;
 }
 
 .sourcecode {
