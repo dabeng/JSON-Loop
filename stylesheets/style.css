@@ -88,8 +88,18 @@ header a:active { text-decoration:underline; }
 
 .sourcecode {
   display: none;
+  overflow: hidden;
+  height: 400px;
 }
 
 footer {
   background-color: black;
+}
+
+.jspVerticalBar {
+  width: 6px;
+}
+
+.jspDrag {
+  background: black;
 }

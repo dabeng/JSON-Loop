@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
     <link href="//fonts.googleapis.com/css?family=Architects+Daughter:400" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Fredericka+the Great:400" rel="stylesheet" type="text/css">
     <link type="text/css" href="stylesheets/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
     <title>Json-loop by dabeng</title>
   </head>
   <body>
@@ -18,41 +18,43 @@
     <section id="blackboard">
       <article class="topic sampledata">
         <h1 class="heading">Sample Data</h1>
-        <p class="description">Here, we have a JSON object indicating the structure of development team </p>
-        <pre class="sourcecode">
-          var obj = {
-            'id': '1', 'name': 'renyang', 'birth': 1985, 'role': 'manager',
-            'member': [
-              {
-                'id': '2', 'name': 'huangfan', 'birth': 1983, 'role': 'manager',
-                'member': [
-                  {'id': '3', 'name': 'chenxiong', 'birth': 1984, 'role': 'engineer'}
-                ]
-              },
-              {
-                'id': '4', 'name': 'yuguang', 'birth': 1981, 'role': 'engineer manager',
-                'member': [
-                  {'id': '5', 'name': 'chenjian', 'birth': 1985, 'role': 'engineer'}
-                ]
-              },
-              {
-                'id': '6', 'name': 'deshi', 'birth': 1980, 'role': 'engineer manager',
-                'member': [
-                  {'id': '7', 'name': 'haibo', 'birth': 1983, 'role': 'engineer'},
-                  {'id': '8', 'name': 'weitao', 'birth': 1987, 'role': 'engineer'},
-                  {'id': '9', 'name': 'liuzheng', 'birth': 1986, 'role': 'engineer'},
-                  {'id': '10', 'name': 'xiaoxue', 'birth': 1988, 'role': 'engineer'},
-                  {'id': '11', 'name': 'xuebin', 'birth': 1982, 'role': 'engineer',
-                    'member': [
-                      {'id': '12', 'name': 'sam', 'birth': 1980, 'role': 'engineer'},
-                      {'id': '13', 'name': 'loklaan', 'birth': 1990, 'role': 'engineer'}
-                    ]
-                  }
-                ]
-              }
-            ]
-          };
+        <p class="description">Here, we have a JSON object indicating the structure of development team.</p>
+        <div class="sourcecode">
+        <pre>
+        var obj = {
+          'id': '1', 'name': 'renyang', 'birth': 1985, 'role': 'manager',
+          'member': [
+            {
+              'id': '2', 'name': 'huangfan', 'birth': 1983, 'role': 'manager',
+              'member': [
+                {'id': '3', 'name': 'chenxiong', 'birth': 1984, 'role': 'engineer'}
+              ]
+            },
+            {
+              'id': '4', 'name': 'yuguang', 'birth': 1981, 'role': 'engineer manager',
+              'member': [
+                {'id': '5', 'name': 'chenjian', 'birth': 1985, 'role': 'engineer'}
+              ]
+            },
+            {
+              'id': '6', 'name': 'deshi', 'birth': 1980, 'role': 'engineer manager',
+              'member': [
+                {'id': '7', 'name': 'haibo', 'birth': 1983, 'role': 'engineer'},
+                {'id': '8', 'name': 'weitao', 'birth': 1987, 'role': 'engineer'},
+                {'id': '9', 'name': 'liuzheng', 'birth': 1986, 'role': 'engineer'},
+                {'id': '10', 'name': 'xiaoxue', 'birth': 1988, 'role': 'engineer'},
+                {'id': '11', 'name': 'xuebin', 'birth': 1982, 'role': 'engineer',
+                  'member': [
+                    {'id': '12', 'name': 'sam', 'birth': 1980, 'role': 'engineer'},
+                    {'id': '13', 'name': 'loklaan', 'birth': 1990, 'role': 'engineer'}
+                  ]
+                }
+              ]
+            }
+          ]
+        };
         </pre>
+      </div>
       </article>
       <article class="topic preparation">
         <h1 class="heading">Preparation</h1>
@@ -166,6 +168,7 @@
     </section>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.jscrollpane.min.js"></script>
     <script type="text/javascript" src="javascripts/main.js"></script>
   </body>
 </html>
