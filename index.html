@@ -20,8 +20,7 @@
       <article class="topic sampledata">
         <h1 class="heading">Sample Data</h1>
         <p class="description">Here, we have a JSON object indicating the structure of development team.</p>
-        <div class="sourcecode">
-          <pre>
+        <textarea class="sourcecode" spellcheck="false">
           var obj = {
             'id': '1', 'name': 'renyang', 'birth': 1985, 'role': 'manager',
             'member': [
@@ -54,25 +53,21 @@
               }
             ]
           };
-          </pre>
-        </div>
+        </textarea>
       </article>
       <article class="topic preparation">
         <h1 class="heading">Preparation</h1>
         <p class="description">First of all, create a json loop object with required params</p>
-        <div class="sourcecode">
-          <pre>
+        <textarea class="sourcecode" spellcheck="false">
           // the first param is the name of 'Id' property of JSON object and the second one
           // is 'children' property name
           var jsonloop = new JSONLoop(obj, 'id', 'member');
-          </pre>
-        </div>
+        </textarea>
       </article>
       <article class="topic method">
         <h1 class="heading">findNodeById()</h1>
         <p class="description">Find one node based on unique id</p>
-        <div class="sourcecode">
-          <pre>
+        <textarea class="sourcecode" spellcheck="false">
           // node is what we are looking for
           jsonloop.findNodeById(obj, '11', function(err, node) {
             if (err) {
@@ -81,14 +76,12 @@
               console.dir(node);
             }
           });
-          </pre>
-        </div>
+        </textarea>
       </article>
       <article class="topic method">
         <h1 class="heading">findNodes()</h1>
         <p class="description">Find the nodes based on conditions</p>
-        <div class="sourcecode">
-          <pre>
+        <textarea class="sourcecode" spellcheck="false">
           // find our uE engineer with her name
           jsonloop.findNodes(obj, {'name': 'xiaoxue'}, function(err, nodes) {
             nodes.forEach(function(node) {
@@ -102,14 +95,12 @@
                 console.dir(node);
               });
           });
-          </pre>
-        </div>
+        </textarea>
       </article>
       <article class="topic method">
         <h1 class="heading">findParent()</h1>
         <p class="description">Find a parent node based on a given node</p>
-        <div class="sourcecode">
-          <pre>
+        <textarea class="sourcecode" spellcheck="false">
           jsonloop.findNodeById(obj, '11', function(err, node) {
             if (err) {
               console.log(err);
@@ -125,14 +116,12 @@
               });
             }
           });
-          </pre>
-        </div>
+        </textarea>
       </article>
       <article class="topic method">
         <h1 class="heading">findSiblings()</h1>
         <p class="description">Find sibling nodes based on a given node</p>
-        <div class="sourcecode">
-          <pre>
+        <textarea class="sourcecode" spellcheck="false">
           jsonloop.findNodeById(obj, '11', function(err, node) {
             if (err) {
               console.log(err);
@@ -150,14 +139,12 @@
               });
             }
           });
-          </pre>
-        </div>
+        </textarea>
       </article>
       <article class="topic method">
         <h1 class="heading">findAncestors()</h1>
         <p class="description">Find ancestor nodes based on a given node</p>
-        <div class="sourcecode">
-          <pre>
+        <textarea class="sourcecode" spellcheck="false">
           jsonloop.findNodeById(obj, '12', function(err, node) {
             console.clear();
             if (err) {
@@ -175,8 +162,7 @@
               });
             }
           });
-          </pre>
-        </div>
+        </textarea>
       </article>
       </div>
       <div class="panel">
