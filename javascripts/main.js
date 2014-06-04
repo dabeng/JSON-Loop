@@ -20,15 +20,16 @@ $(function($){
 
   // back to the index page
   $('.commandBtn.back').on('click', function() {
-    var currentTopic = $('.sourcecode').not(':hidden');
-    currentTopic.removeAttr('style');
+    var currentTopic = $('.topic').not(':hidden');
+    
     currentTopic.animate({'width': 230, 'height': 160}, 500, function() {
-      currentTopic.siblings().show();
+      currentTopic.css('background', '');
+      currentTopic.siblings().fadeIn();
       currentTopic.children('.sourcecode').hide();
       $('.commandBtn').hide();
     });
-    currentTopic.children('.heading').animate({'font-size': 12}, 500);
-    currentTopic.children('.description').animate({'font-size': 12}, 500);
+    currentTopic.children('.heading').animate({'font-size': 20}, 500);
+    currentTopic.children('.description').animate({'font-size': 16}, 500);
   });
 
 });

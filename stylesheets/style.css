@@ -87,10 +87,12 @@ header a:active { text-decoration:underline; }
 }
 
 .topic .heading {
+  font-size: 20px;
   text-align: center;
 }
 
 .topic .description {
+  font-size: 16px;
   padding: 0 10px;
 }
 
