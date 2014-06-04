@@ -83,7 +83,7 @@ header a:active { text-decoration:underline; }
   float: left;
   margin-top: 16px;
   margin-left: 16px;
-  background: url(../images/topic.gif);
+  background: rgba(0,0,0,0.6);
 }
 
 .topic .heading {

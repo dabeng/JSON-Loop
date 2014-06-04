@@ -2,7 +2,7 @@ $(function($){
   // show sample data
   $('.topic').on('click', function() {
     var that = $(this);
-    that.siblings().hide().end().css('background', 'transparent');
+    that.siblings().hide();
     that.animate({'width': 968, 'height': 568}, 500, function() {
       that.children('.sourcecode').show();
       $('.commandBtn').show();
@@ -21,9 +21,7 @@ $(function($){
   // back to the index page
   $('.commandBtn.back').on('click', function() {
     var currentTopic = $('.topic').not(':hidden');
-    
     currentTopic.animate({'width': 230, 'height': 160}, 500, function() {
-      currentTopic.css('background', '');
       currentTopic.siblings().fadeIn();
       currentTopic.children('.sourcecode').hide();
       $('.commandBtn').hide();
