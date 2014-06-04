@@ -11,6 +11,11 @@ $(function($){
     that.children('.description').animate({'font-size': 20}, 500);
   });
 
-  //
+  // run the code dynamically
+  $('.commandBtn.run').on('click', function() {
+    if ($('.sourcecode').not(':hidden').length > 0) {
+      eval($('.sourcecode').not(':hidden')[0].value);
+    }
+  });
 
 });
