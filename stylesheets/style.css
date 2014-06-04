@@ -62,11 +62,19 @@ header a:active { text-decoration:underline; }
 }
 
 #blackboard {
+  position: relative;
   width:1000px;
   height:600px;
   background: url(../images/background.jpg);
   margin: 20px auto 0px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+}
+
+.topicWrapper {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  bottom: 40px;
 }
 
 .topic {
@@ -90,6 +98,27 @@ header a:active { text-decoration:underline; }
   display: none;
   overflow: hidden;
   height: 400px;
+}
+
+.panel {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 40px;
+  text-align: right;
+  line-height: 40px;
+}
+
+.commandBtn {
+  width: 60px;
+  height: 30px;
+  border: 0px;
+  margin-right: 5px;
+  background: url(../images/btn.gif);
+  font-size: 16px;
+  font-weight: bold;
+  display: none;
 }
 
 footer {

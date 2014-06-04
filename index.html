@@ -16,59 +16,63 @@
       <a href="https://github.com/dabeng/JSON-Loop" class="github">Fork me on GitHub</a>
     </header>
     <section id="blackboard">
+      <div class="topicWrapper">
       <article class="topic sampledata">
         <h1 class="heading">Sample Data</h1>
         <p class="description">Here, we have a JSON object indicating the structure of development team.</p>
         <div class="sourcecode">
-        <pre>
-        var obj = {
-          'id': '1', 'name': 'renyang', 'birth': 1985, 'role': 'manager',
-          'member': [
-            {
-              'id': '2', 'name': 'huangfan', 'birth': 1983, 'role': 'manager',
-              'member': [
-                {'id': '3', 'name': 'chenxiong', 'birth': 1984, 'role': 'engineer'}
-              ]
-            },
-            {
-              'id': '4', 'name': 'yuguang', 'birth': 1981, 'role': 'engineer manager',
-              'member': [
-                {'id': '5', 'name': 'chenjian', 'birth': 1985, 'role': 'engineer'}
-              ]
-            },
-            {
-              'id': '6', 'name': 'deshi', 'birth': 1980, 'role': 'engineer manager',
-              'member': [
-                {'id': '7', 'name': 'haibo', 'birth': 1983, 'role': 'engineer'},
-                {'id': '8', 'name': 'weitao', 'birth': 1987, 'role': 'engineer'},
-                {'id': '9', 'name': 'liuzheng', 'birth': 1986, 'role': 'engineer'},
-                {'id': '10', 'name': 'xiaoxue', 'birth': 1988, 'role': 'engineer'},
-                {'id': '11', 'name': 'xuebin', 'birth': 1982, 'role': 'engineer',
-                  'member': [
-                    {'id': '12', 'name': 'sam', 'birth': 1980, 'role': 'engineer'},
-                    {'id': '13', 'name': 'loklaan', 'birth': 1990, 'role': 'engineer'}
-                  ]
-                }
-              ]
-            }
-          ]
-        };
-        </pre>
-      </div>
+          <pre>
+          var obj = {
+            'id': '1', 'name': 'renyang', 'birth': 1985, 'role': 'manager',
+            'member': [
+              {
+                'id': '2', 'name': 'huangfan', 'birth': 1983, 'role': 'manager',
+                'member': [
+                  {'id': '3', 'name': 'chenxiong', 'birth': 1984, 'role': 'engineer'}
+                ]
+              },
+              {
+                'id': '4', 'name': 'yuguang', 'birth': 1981, 'role': 'engineer manager',
+                'member': [
+                  {'id': '5', 'name': 'chenjian', 'birth': 1985, 'role': 'engineer'}
+                ]
+              },
+              {
+                'id': '6', 'name': 'deshi', 'birth': 1980, 'role': 'engineer manager',
+                'member': [
+                  {'id': '7', 'name': 'haibo', 'birth': 1983, 'role': 'engineer'},
+                  {'id': '8', 'name': 'weitao', 'birth': 1987, 'role': 'engineer'},
+                  {'id': '9', 'name': 'liuzheng', 'birth': 1986, 'role': 'engineer'},
+                  {'id': '10', 'name': 'xiaoxue', 'birth': 1988, 'role': 'engineer'},
+                  {'id': '11', 'name': 'xuebin', 'birth': 1982, 'role': 'engineer',
+                    'member': [
+                      {'id': '12', 'name': 'sam', 'birth': 1980, 'role': 'engineer'},
+                      {'id': '13', 'name': 'loklaan', 'birth': 1990, 'role': 'engineer'}
+                    ]
+                  }
+                ]
+              }
+            ]
+          };
+          </pre>
+        </div>
       </article>
       <article class="topic preparation">
         <h1 class="heading">Preparation</h1>
         <p class="description">First of all, create a json loop object with required params</p>
-        <pre class="sourcecode">
+        <div class="sourcecode">
+          <pre>
           // the first param is the name of 'Id' property of JSON object and the second one
           // is 'children' property name
           var jsonloop = new JSONLoop(obj, 'id', 'member');
-        </pre>
+          </pre>
+        </div>
       </article>
       <article class="topic method">
         <h1 class="heading">findNodeById()</h1>
         <p class="description">Find one node based on unique id</p>
-        <pre class="sourcecode">
+        <div class="sourcecode">
+          <pre>
           // node is what we are looking for
           jsonloop.findNodeById(obj, '11', function(err, node) {
             if (err) {
@@ -77,12 +81,14 @@
               console.dir(node);
             }
           });
-        </pre>
+          </pre>
+        </div>
       </article>
       <article class="topic method">
         <h1 class="heading">findNodes()</h1>
         <p class="description">Find the nodes based on conditions</p>
-        <pre class="sourcecode">
+        <div class="sourcecode">
+          <pre>
           // find our uE engineer with her name
           jsonloop.findNodes(obj, {'name': 'xiaoxue'}, function(err, nodes) {
             nodes.forEach(function(node) {
@@ -96,12 +102,14 @@
                 console.dir(node);
               });
           });
-        </pre>
+          </pre>
+        </div>
       </article>
       <article class="topic method">
         <h1 class="heading">findParent()</h1>
         <p class="description">Find a parent node based on a given node</p>
-        <pre class="sourcecode">
+        <div class="sourcecode">
+          <pre>
           jsonloop.findNodeById(obj, '11', function(err, node) {
             if (err) {
               console.log(err);
@@ -117,12 +125,14 @@
               });
             }
           });
-        </pre>
+          </pre>
+        </div>
       </article>
       <article class="topic method">
         <h1 class="heading">findSiblings()</h1>
         <p class="description">Find sibling nodes based on a given node</p>
-        <pre class="sourcecode">
+        <div class="sourcecode">
+          <pre>
           jsonloop.findNodeById(obj, '11', function(err, node) {
             if (err) {
               console.log(err);
@@ -140,12 +150,14 @@
               });
             }
           });
-        </pre>
+          </pre>
+        </div>
       </article>
       <article class="topic method">
         <h1 class="heading">findAncestors()</h1>
         <p class="description">Find ancestor nodes based on a given node</p>
-        <pre class="sourcecode">
+        <div class="sourcecode">
+          <pre>
           jsonloop.findNodeById(obj, '12', function(err, node) {
             console.clear();
             if (err) {
@@ -163,8 +175,15 @@
               });
             }
           });
-        </pre>
+          </pre>
+        </div>
       </article>
+      </div>
+      <div class="panel">
+        <button class="commandBtn run">Run</button>
+        <button class="commandBtn copy">Copy</button>
+        <button class="commandBtn back">Back</button>
+      </div>
     </section>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/jquery.mousewheel.js"></script>
