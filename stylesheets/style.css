@@ -94,12 +94,6 @@ header a:active { text-decoration:underline; }
   padding: 0 10px;
 }
 
-/*.sourcecode {
-  display: none;
-  overflow: hidden;
-  height: 400px;
-}*/
-
 .sourcecode {
   display: none;
   width: 100%;
