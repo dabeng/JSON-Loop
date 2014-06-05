@@ -1,4 +1,9 @@
 $(function($){
+  // store the original source code for every topic
+  $('.sourcecode').each(function(index, code) {
+    $(code).data('originalCode', code.value);
+  });
+
   // show sample data
   $('.topic').not('.note').on('click', function() {
     var that = $(this);
@@ -30,7 +35,8 @@ $(function($){
     var currentTopic = $('.topic').not(':hidden');
     currentTopic.animate({'width': 230, 'height': 160}, 300, function() {
       currentTopic.siblings().fadeIn();
-      currentTopic.children('.sourcecode').hide();
+      var code = currentTopic.children('.sourcecode');
+      code.hide().val(code.data('originalCode'));
       $('.commandBtn').hide();
     });
     currentTopic.children('.heading').animate({'font-size': 20}, 300);
