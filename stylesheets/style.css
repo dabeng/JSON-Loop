@@ -88,6 +88,7 @@ header a:active { text-decoration:underline; }
 
 .topic.note {
   color: black;
+  font-weight: bold;
   background: rgba(255,255,255,0.6);
 }
 
@@ -127,7 +128,7 @@ header a:active { text-decoration:underline; }
   height: 30px;
   border: 0px;
   margin-right: 5px;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.6);
   font-size: 16px;
   font-weight: bold;
   display: none;

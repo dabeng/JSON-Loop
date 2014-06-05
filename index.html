@@ -55,9 +55,9 @@
             };
           </textarea>
         </article>
-        <article class="topic preparation">
-          <h1 class="heading">Preparation</h1>
-          <p class="description">First of all, create a json loop object with required params</p>
+        <article class="topic instantiation">
+          <h1 class="heading">Instantiation</h1>
+          <p class="description">First of all, create a json loop object with required params.</p>
           <textarea class="sourcecode" spellcheck="false">
             // the first param is the name of 'Id' property of JSON object and the second one
             // is 'children' property name
@@ -66,7 +66,7 @@
         </article>
         <article class="topic method">
           <h1 class="heading">findNodeById()</h1>
-          <p class="description">Find one node based on unique id</p>
+          <p class="description">Find one node based on unique id.</p>
           <textarea class="sourcecode" spellcheck="false">
             // node is what we are looking for
             jsonloop.findNodeById(obj, '11', function(err, node) {
@@ -80,7 +80,7 @@
         </article>
         <article class="topic method">
           <h1 class="heading">findNodes()</h1>
-          <p class="description">Find the nodes based on conditions</p>
+          <p class="description">Find the nodes based on conditions.</p>
           <textarea class="sourcecode" spellcheck="false">
             // find our uE engineer with her name
             jsonloop.findNodes(obj, {'name': 'xiaoxue'}, function(err, nodes) {
@@ -99,7 +99,7 @@
         </article>
         <article class="topic method">
           <h1 class="heading">findParent()</h1>
-          <p class="description">Find a parent node based on a given node</p>
+          <p class="description">Find a parent node based on a given node.</p>
           <textarea class="sourcecode" spellcheck="false">
             jsonloop.findNodeById(obj, '11', function(err, node) {
               if (err) {
@@ -120,7 +120,7 @@
         </article>
         <article class="topic method">
           <h1 class="heading">findSiblings()</h1>
-          <p class="description">Find sibling nodes based on a given node</p>
+          <p class="description">Find sibling nodes based on a given node.</p>
           <textarea class="sourcecode" spellcheck="false">
             jsonloop.findNodeById(obj, '11', function(err, node) {
               if (err) {
@@ -143,7 +143,7 @@
         </article>
         <article class="topic method">
           <h1 class="heading">findAncestors()</h1>
-          <p class="description">Find ancestor nodes based on a given node</p>
+          <p class="description">Find ancestor nodes based on a given node.</p>
           <textarea class="sourcecode" spellcheck="false">
             jsonloop.findNodeById(obj, '12', function(err, node) {
               console.clear();
@@ -171,13 +171,13 @@
       </div>
       <div class="panel">
         <button class="commandBtn run">Run</button>
-        <button class="commandBtn copy">Copy</button>
         <button class="commandBtn back">Back</button>
       </div>
     </section>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="javascripts/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="javascripts/jquery.mousewheel.js"></script>
     <script type="text/javascript" src="javascripts/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/dabeng/JSON-Loop/master/JSONLoop.js"></script>
     <script type="text/javascript" src="javascripts/main.js"></script>
   </body>
 </html>
