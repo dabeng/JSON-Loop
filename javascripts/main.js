@@ -1,6 +1,6 @@
 $(function($){
   // show sample data
-  $('.topic').not('.note')on('click', function() {
+  $('.topic').not('.note').on('click', function() {
     var that = $(this);
     that.siblings().hide();
     that.animate({'width': 968, 'height': 568}, 500, function() {
