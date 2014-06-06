@@ -132,3 +132,4 @@ The following are posts related to loop through nested json object where JOSN Lo
 * [\[Stack Overflow\] How do I loop through deeply nested properties of a json object?](http://stackoverflow.com/questions/5189387/how-do-i-loop-through-deeply-nested-properties-of-a-json-object)
 * [\[Stack Overflow\] json find parent node of node where key named “id” equal to “value”](http://stackoverflow.com/questions/19047906/json-find-parent-node-of-node-where-key-named-id-equal-to-value)
 * [\[Stack Overflow\] Find the path of JSON for a key value](http://stackoverflow.com/questions/18758593/find-the-path-of-json-for-a-key-value)
+* [\[Stack Overflow\] Constructively manipulating any value/object within a JSON tree of unknown depth](http://stackoverflow.com/questions/3702844/constructively-manipulating-any-value-object-within-a-json-tree-of-unknown-depth)
