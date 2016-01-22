@@ -44,7 +44,8 @@ var obj = {
 	
 ### First of all, create a json loop object with required params
 ```javascript
-// the first param is the name of 'Id' property of JSON object and the second one is 'children' property name
+// the first param is the name of 'Id' property of JSON object and the second one
+// is 'children' property name
 var jsonloop = new JSONLoop(obj, 'id', 'member');
 ```	
 ### Find one node based on unique id
