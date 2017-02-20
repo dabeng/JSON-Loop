@@ -44,7 +44,7 @@
     findNodeById: function(obj, id, callback) {
       if (obj[this.id] === id) {
         this.count = this.total + 0;
-        callback(null, this.generateClone(obj));
+        callback(null, obj);
       } else {
         if (this.count === 1) {
           this.count = this.total + 0;
