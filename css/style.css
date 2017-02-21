@@ -57,7 +57,7 @@ header a:active { text-decoration:underline; }
   width: 80px;
   height: 80px;
   margin: 10px 30px;
-  background: url(../images/logo.gif);
+  background: url(../img/logo.gif);
   background-size: 80px 80px;
 }
 
@@ -65,7 +65,7 @@ header a:active { text-decoration:underline; }
   position: relative;
   width:1000px;
   height:600px;
-  background: url(../images/background.jpg);
+  background: url(../img/background.jpg);
   margin: 20px auto 0px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.8);
 }
