@@ -4,6 +4,8 @@ JSON Loop is a super easy to use tool class helping you loop the deeply nested J
 
 ## **[Demo](http://dabeng.github.io/JSON-Loop/)**
 
+## [Here's the ES6 version](https://github.com/dabeng/json-digger)
+
 ## Usage
 Note: Here I don't provide API specification because the following code snippets are demonstractive enough.
 
